@@ -53,7 +53,7 @@
                                             <a href="#">Secret Mountain</a>
                                         </li>
                                         <li>
-                                            <a href="#">Petaluma</a>
+                                            <a href="#">San Diego</a>
                                         </li>
                                     </ul>
                                 </li>
