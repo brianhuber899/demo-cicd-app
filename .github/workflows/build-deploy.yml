@@ -57,7 +57,7 @@ jobs:
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
           job-name: 'Change Request Attributes'
-          change-request: '{"setCloseCode":"true","attributes":{short_description":"Automated Software Deployment"}}'
+          change-request: '{"setCloseCode":"true","attributes":{"short_description":"Automated Software Deployment"}}'
           interval: '100'
           timeout: '3600'
 
