@@ -15,7 +15,7 @@ jobs:
   createchange:
     name: Create Change
     runs-on: ubuntu-latest 
-    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+    #if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
     steps:
       - name: ServiceNow DevOps Change Automation
         uses: ServiceNow/servicenow-devops-change@v1.35.2
