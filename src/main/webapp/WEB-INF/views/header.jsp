@@ -56,7 +56,7 @@
                                             <a href="#">San Francisco</a>
                                         </li>
                                         <li>
-                                            <a href="#">Miami</a>
+                                            <a href="#">St. Petersburg</a>
                                         </li>
                                     </ul>
                                 </li>
