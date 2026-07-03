@@ -17,8 +17,8 @@ jobs:
     runs-on: ubuntu-latest 
     #if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
     steps:
-      - name: ServiceNow DevOps Change Automation
-        uses: ServiceNow/servicenow-devops-change@v1.35.2
+      - name: ServiceNow Change
+        uses: ServiceNow/servicenow-devops-change@v7.0.0
         with:
           devops-integration-token: ${{ secrets.SN_DEVOPS_INTEGRATION_TOKEN }}
           instance-url: ${{ secrets.SN_INSTANCE_URL }}
