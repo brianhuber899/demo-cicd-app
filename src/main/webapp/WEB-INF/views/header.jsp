@@ -56,7 +56,7 @@
                                             <a href="#">San Francisco</a>
                                         </li>
                                         <li>
-                                            <a href="#">San Antonio</a>
+                                            <a href="#">Corpus Christi</a>
                                         </li>
                                     </ul>
                                 </li>
