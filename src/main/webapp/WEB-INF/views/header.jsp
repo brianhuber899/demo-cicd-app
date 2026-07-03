@@ -56,7 +56,7 @@
                                             <a href="#">San Francisco</a>
                                         </li>
                                         <li>
-                                            <a href="#">Lubbock</a>
+                                            <a href="#">Tampa</a>
                                         </li>
                                     </ul>
                                 </li>
