@@ -58,6 +58,9 @@
                                         <li>
                                             <a href="#">Chicago</a>
                                         </li>
+                                        <li>
+                                            <a href="#">New York</a>
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>
