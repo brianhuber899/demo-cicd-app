@@ -59,7 +59,7 @@
                                             <a href="#">Chicago</a>
                                         </li>
                                         <li>
-                                            <a href="#">New York</a>
+                                            <a href="#">New Yorkie</a>
                                         </li>
                                     </ul>
                                 </li>
