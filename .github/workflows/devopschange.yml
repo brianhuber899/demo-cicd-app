@@ -66,9 +66,13 @@ jobs:
           context-github: ${{ toJSON(github) }}
           job-name: 'PROD-Deploy'
           #change-request: '{"setCloseCode":"true","attributes":{"short_description":"Automated PROD Software Deployment","description":"Automated Software Deployment.","assignment_group":"a715cd759f2002002920bde8132e7018","implementation_plan":"Software update is tested and results can be found in Test Summaries Tab; When the change is approved the implementation happens automated by the CICD pipeline within the change planned start and end time window.","backout_plan":"When software fails in production, the previous software release will be re-deployed.","test_plan":"Testing if the software was successfully deployed"}}'          
-          change-request: '{"setCloseCode":"true","attributes":{"short_description":"Automated PROD Software Deployment","description":"Automated Software Deployment.","assignment_group":"a715cd759f2002002920bde8132e7018","backout_plan":"LaunchDarkly flag","devops_change":"true","implementation_plan":"Software update is tested and results can be found in Test Summaries Tab; When the change is approved the implementation happens automated by the CICD pipeline within the change planned start and end time window.","test_plan":"Testing if the software was successfully deployed"}}'          
+          change-request: '{"setCloseCode":"true","attributes":{"model":"5c05c754433a02104a6e556d58b8f278","short_description":"Automated PROD Software Deployment","description":"Automated Software Deployment.","assignment_group":"a715cd759f2002002920bde8132e7018","backout_plan":"LaunchDarkly flag","devops_change":"true","implementation_plan":"Software update is tested and results can be found in Test Summaries Tab; When the change is approved the implementation happens automated by the CICD pipeline within the change planned start and end time window.","test_plan":"Testing if the software was successfully deployed"}}'          
+          #5c05c754433a02104a6e556d58b8f278 is DevOps Simple
           interval: '100'
-          timeout: '3600'     
+          timeout: '3600'
+          changeCreationTimeOut: '3600'
+          abortOnChangeCreationFailure: true
+          abortOnChangeStepTimeout: true  #aborts after 1 hour if not approved by default
       - uses: actions/checkout@v6
       - name: Run a one-line script
         run: echo Hello, world!
