@@ -60,7 +60,7 @@ jobs:
       - name: Generate Value
         id: ld
         run: |
-          echo "is_ld_flag=true" >> $GITHUB_OUTPUT
+          echo "is_ld_flag=false" >> $GITHUB_OUTPUT
       # Step 2: Read the output
       - name: Display Flag Value
         run: |
