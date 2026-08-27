@@ -77,7 +77,7 @@ jobs:
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
           job-name: 'PROD-Deploy'
-          change-request: '{"setCloseCode":true,"autoCloseChange":true,"attributes":{"chg_model":{"name":"DevOps"},"short_description":"Automated Software Deployment","description":"n/a","requested_by":{"name": "DevOps System"},"u_environment":{"name": "Prod"},"implementation_plan":"Implementation happens automated by the CICD pipeline within the change planned start and end time window.","backout_plan":"Feature Flag backout","test_plan":"n/a"}}'
+          change-request: '{"setCloseCode":true,"autoCloseChange":true,"attributes":{"chg_model":{"name":"DevOps"},"short_description":"Automated Software Deployment","description":"n/a","requested_by":{"name": "DevOps System"},"implementation_plan":"Implementation happens automated by the CICD pipeline within the change planned start and end time window.","backout_plan":"Feature Flag backout","test_plan":"n/a"}}'
       - name: ServiceNow Normal if false        
         if: "!fromJSON(steps.ld.outputs.is_ld_flag)"
         uses: ServiceNow/servicenow-devops-change@v7.0.0
@@ -87,7 +87,7 @@ jobs:
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
           job-name: 'PROD-Deploy'
-          change-request: '{"setCloseCode":true,"autoCloseChange":true,"attributes":{"chg_model":{"name":"Normal"},"short_description":"Automated Software Deployment","description":"n/a","requested_by":{"name": "DevOps System"},"u_environment":{"name": "Prod"},"implementation_plan":"Implementation happens automated by the CICD pipeline within the change planned start and end time window.","backout_plan":"Standard backout plan","test_plan":"n/a"}}'
+          change-request: '{"setCloseCode":true,"autoCloseChange":true,"attributes":{"chg_model":{"name":"Normal"},"short_description":"Automated Software Deployment","description":"n/a","requested_by":{"name": "DevOps System"},"implementation_plan":"Implementation happens automated by the CICD pipeline within the change planned start and end time window.","backout_plan":"Standard backout plan","test_plan":"n/a"}}'
       - uses: actions/checkout@v6
       - name: Run a one-line script
         run: echo Hello, world!
