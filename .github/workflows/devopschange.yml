@@ -82,7 +82,6 @@ jobs:
           job-name: 'PROD-Deploy'
           change-request: '{"setCloseCode":true,"autoCloseChange":true,"attributes":{"chg_model":{"name":"DevOps"},"short_description":"Automated Software Deployment","description":"n/a","requested_by":{"name": "DevOps System"},"implementation_plan":"Implementation happens automated by the CICD pipeline within the change planned start and end time window.","backout_plan":"Feature Flag backout","test_plan":"n/a"}}'
 
-          # testing123 test with alternate branch
       - name: ServiceNow Normal if false        
         if: "!fromJSON(steps.ld.outputs.is_ld_flag)"
         uses: ServiceNow/servicenow-devops-change@v7.0.0
@@ -93,9 +92,7 @@ jobs:
           context-github: ${{ toJSON(github) }}
           job-name: 'PROD-Deploy'
           change-request: '{"setCloseCode":true,"autoCloseChange":true,"attributes":{"chg_model":{"name":"DevOps"},"short_description":"Automated Software Deployment","description":"n/a","requested_by":{"name": "DevOps System"},"implementation_plan":"Implementation happens automated by the CICD pipeline within the change planned start and end time window.","backout_plan":"Standard backout plan","test_plan":"n/a"}}'
-           # For deployment gate based change, uncomment the 'deployment-gate' configuration and the 'deploy' step 
-          deployment-gate: '{"environment": "production", "jobName": "Deploy"}'
-
+           
   deploy:
     name: 'Deploy'
     needs: prod-deploy
