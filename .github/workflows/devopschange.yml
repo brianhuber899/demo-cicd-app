@@ -57,7 +57,7 @@ jobs:
     name: PROD-Deploy
     runs-on: ubuntu-latest
     needs: uat-test
-    environment: production
+    # environment: production
     steps:
       # Step 1: Set Boolean value, replace this with feature flag evaluation
       - name: Generate Value
@@ -93,11 +93,21 @@ jobs:
           context-github: ${{ toJSON(github) }}
           job-name: 'PROD-Deploy'
           change-request: '{"setCloseCode":true,"autoCloseChange":true,"attributes":{"chg_model":{"name":"DevOps"},"short_description":"Automated Software Deployment","description":"n/a","requested_by":{"name": "DevOps System"},"implementation_plan":"Implementation happens automated by the CICD pipeline within the change planned start and end time window.","backout_plan":"Standard backout plan","test_plan":"n/a"}}'
+   # For deployment gate based change, uncomment the 'deployment-gate' configuration and the 'deploy' step 
+          deployment-gate: '{"environment": "production", "jobName": "Deploy"}'
 
-      - uses: actions/checkout@v6
-      - name: Run a one-line script
-        run: echo Hello, world!
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+  deploy:
+    name: 'Deploy'
+    needs: prod-deploy
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+    - name: Run deployment scripts
+      run: echo Completed Deployment
+#      - uses: actions/checkout@v6
+#      - name: Run a one-line script
+#        run: echo Hello, world!
+#      - name: Run a multi-line script
+#        run: |
+#          echo Add other actions to build,
+#          echo test, and deploy your project.
