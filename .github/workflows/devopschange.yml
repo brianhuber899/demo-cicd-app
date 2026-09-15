@@ -57,7 +57,7 @@ jobs:
     name: PROD-Deploy
     runs-on: ubuntu-latest
     needs: uat-test
-    environment: production
+    # environment: production
     steps:
       # Step 1: Set Boolean value, replace this with feature flag evaluation
       - name: Generate Value
