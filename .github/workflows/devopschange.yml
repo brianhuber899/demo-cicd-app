@@ -92,6 +92,10 @@ jobs:
           context-github: ${{ toJSON(github) }}
           job-name: 'PROD-Deploy'
           change-request: '{"setCloseCode":true,"autoCloseChange":true,"attributes":{"chg_model":{"name":"DevOps"},"category":"DevOps","short_description":"Automated Software Deployment","description":"n/a","requested_by":{"name": "DevOps System"},"assignment_group":{"name": "Application Development"},"assigned_to":{"name": "DevOps System"},"implementation_plan":"Implementation happens automated by the CICD pipeline within the change planned start and end time window.","backout_plan":"Standard backout plan","test_plan":"n/a"}}'
+          timeout: '1800'
+          changeCreationTimeOut: '3600'
+          abortOnChangeCreationFailure: true
+          abortOnChangeStepTimeout: false
            
   deploy:
     name: 'Deploy'
