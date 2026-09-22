@@ -56,10 +56,10 @@
                                             <a href="#">San Francisco</a>
                                         </li>
                                         <li>
-                                            <a href="#">Chicago</a>
+                                            <a href="#">Chicago, IL</a>
                                         </li>
                                         <li>
-                                            <a href="#">Albany</a>
+                                            <a href="#">Albany, NY</a>
                                         </li>
                                     </ul>
                                 </li>
