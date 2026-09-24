@@ -59,7 +59,7 @@
                                             <a href="#">Chicago</a>
                                         </li>
                                         <li>
-                                            <a href="#">Albania</a>
+                                            <a href="#">Albany</a>
                                         </li>
                                     </ul>
                                 </li>
