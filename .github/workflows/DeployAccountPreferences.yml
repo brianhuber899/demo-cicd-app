@@ -19,7 +19,7 @@ jobs:
   # deploy stage
   deploy:
     name: Deploy to INT, CERT and PROD
-    uses: brianhuber899/demo-cicd-app/.github/workflows/devopschange.yml@servicenow
+    uses: brianhuber899/demo-cicd-app/.github/workflows/devopschange.yml@main
     secrets:
       SN_DEVOPS_INTEGRATION_TOKEN: ${{ secrets.SN_DEVOPS_INTEGRATION_TOKEN }}
       SN_INSTANCE_URL: ${{ secrets.SN_INSTANCE_URL }}
